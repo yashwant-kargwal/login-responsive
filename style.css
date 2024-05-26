@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background-color: black;
+}
+
+.formouter{
+    padding: 5% 10%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cir1{
+    background-image: linear-gradient(
+        red,
+        rgb(255, 255, 255));
+        top: 50px;
+        left: 370px;
+        z-index: -2;
+}
+
+.cir2{
+    background-image: linear-gradient(
+        green,
+        yellow);
+        bottom: 50px;
+        right: 370px;
+        z-index: -1;
+}
+
+.comon-cir{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    animation: gumna 2s linear 0s infinite normal;
+}
+
+@keyframes gumna {
+    0%{
+        transform: rotate(0deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.forminner{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 30px white;
+    padding: 1rem 2rem;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+}
+
+form{
+    height: fit-content;
+    padding: 1rem;
+}
+
+form h1{
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+form label{
+    color: white;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+}
+
+input{
+    height: 22px;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    letter-spacing: 0.1rem;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+input:focus{
+    outline: none;
+}
+
+.buttonsumit{
+    width: 5rem;
+    margin-top: 20px;
+    height: 2rem;
+    border: 2px solid wheat;
+    text-align: center;
+    align-self: center;
+    border-radius: 10px;
+}
+
+@media (max-width:1290px) and (min-width:1024px) {
+    .cir1{
+        left: 320px;
+    }
+    .cir2{
+        right: 320px;
+    }
+}
+
+@media (max-width:1024px) and (min-width:768px) {
+    .cir1{
+        left: 200px;
+    }
+    .cir2{
+        right: 200px;
+    }
+}
+
+@media (max-width:768px) and (min-width:544px) {
+    .cir1{
+        left: 100px;
+    }
+    .cir2{
+        right: 100px;
+    }
+}
+
+@media (max-width:544px) and (min-width:425px) {
+    .cir1{
+        left: 80px;
+        top: 2px;
+        height: 150px;
+        width: 150px;
+    }
+    .cir2{
+        right: 80px;
+        bottom: 2px;
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width:425px) and (min-width:375px) {
+    .cir1{
+        left: 10px;
+        top: 2px;
+        height: 150px;
+        width: 150px;
+    }
+    .cir2{
+        right: 10px;
+        bottom: 2px;
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width:375px) {
+    .cir1{
+        visibility: hidden;
+    }
+    .cir2{
+        visibility: hidden;
+    }
+}
