@@ -2,16 +2,16 @@
     margin: 0;
     padding: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border:border-box;
 }
 
 body{
     background-color: black;
+    height: 100vh;
 }
 
 .formouter{
-    padding: 5% 10%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    height: 500px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,8 @@ body{
     background-image: linear-gradient(
         red,
         rgb(255, 255, 255));
-        top: 50px;
-        left: 370px;
+        top: 9vh;
+        left: 28vw;
         z-index: -2;
 }
 
@@ -30,16 +30,15 @@ body{
     background-image: linear-gradient(
         green,
         yellow);
-        bottom: 50px;
-        right: 370px;
+        bottom: 9vh;
+        right: 28vw;
         z-index: -1;
 }
 
 .comon-cir{
-    height: 200px;
-    width: 200px;
+    height: 15em;
+    width: 15em;
     border-radius: 50%;
-    display: inline-block;
     position: absolute;
     animation: gumna 2s linear 0s infinite normal;
 }
@@ -56,7 +55,7 @@ body{
 
 .forminner{
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 0px 30px white;
+    box-shadow: 0px 0px 30px ;
     padding: 1rem 2rem;
     width: fit-content;
     display: flex;
@@ -64,17 +63,18 @@ body{
     align-items: center;
     border-radius: 20px;
     backdrop-filter: blur(30px);
+    margin: 5%;
 }
 
 form{
-    height: fit-content;
     padding: 1rem;
 }
 
 form h1{
     color: white;
-    font-size: 4rem;
+    font-size: 4em;
     margin-bottom: 1rem;
+    text-shadow: 10px 0px 10px black;
 }
 
 form label{
@@ -84,11 +84,11 @@ form label{
 }
 
 input{
-    height: 22px;
+    height: 2rem;
     width: 100%;
     background-color: transparent;
     color: white;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     border: none;
     border-bottom: 2px solid white;
 }
@@ -99,76 +99,60 @@ input:focus{
 
 .buttonsumit{
     width: 5rem;
-    margin-top: 20px;
+    margin-top: 2rem;
     height: 2rem;
     border: 2px solid wheat;
     text-align: center;
     align-self: center;
     border-radius: 10px;
+    transition: all 1s;
 }
 
-@media (max-width:1290px) and (min-width:1024px) {
-    .cir1{
-        left: 320px;
-    }
-    .cir2{
-        right: 320px;
-    }
+.buttonsumit:hover{
+    box-shadow: 0px 0px 10px;
 }
 
-@media (max-width:1024px) and (min-width:768px) {
-    .cir1{
-        left: 200px;
-    }
-    .cir2{
-        right: 200px;
-    }
-}
+/* Media Query For Mobile Screen */
 
-@media (max-width:768px) and (min-width:544px) {
+@media (max-width:500px){
+    .comon-cir{
+        height: 10em;
+        width: 10em;
+    }
     .cir1{
-        left: 100px;
+        top: 9vh;
+        left: 1vw;
     }
     .cir2{
-        right: 100px;
+        bottom: 9vh;
+        right: 1vw;
     }
-}
 
-@media (max-width:544px) and (min-width:425px) {
-    .cir1{
-        left: 80px;
-        top: 2px;
-        height: 150px;
-        width: 150px;
+    form h1{
+        font-size: 2.1rem;
     }
-    .cir2{
-        right: 80px;
-        bottom: 2px;
-        height: 150px;
-        width: 150px;
+
+    form input{
+        font-size: 0.8rem;
+    }
+
+    form label{
+        font-size: 1.1rem;
     }
 }
 
-@media (max-width:425px) and (min-width:375px) {
-    .cir1{
-        left: 10px;
-        top: 2px;
-        height: 150px;
-        width: 150px;
-    }
-    .cir2{
-        right: 10px;
-        bottom: 2px;
-        height: 150px;
-        width: 150px;
-    }
-}
+/* Media Query For Tablet Screen */
 
-@media (max-width:375px) {
+@media (max-width:768px) and (min-width:500px){
     .cir1{
-        visibility: hidden;
+        left: 10vw;
     }
     .cir2{
-        visibility: hidden;
+        right: 10vw;
+    }
+
+    .comon-cir{
+        height: 11em;
+        width: 11em;
     }
 }
