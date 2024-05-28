@@ -1,13 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    box-sizing:border-box;
 }
 
 body{
     background-color: black;
     height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing:border-box;
+    overflow: hidden;
 }
 
 .formouter{
@@ -15,13 +16,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .cir1{
     background-image: linear-gradient(
         red,
         rgb(255, 255, 255));
-        top: 9vh;
+        top: 9%;
         left: 28vw;
         z-index: -2;
 }
@@ -30,7 +32,7 @@ body{
     background-image: linear-gradient(
         green,
         yellow);
-        bottom: 9vh;
+        bottom: 9%;
         right: 28vw;
         z-index: -1;
 }
@@ -120,11 +122,11 @@ input:focus{
         width: 10em;
     }
     .cir1{
-        top: 9vh;
+        /* top: 9vh; */
         left: 1vw;
     }
     .cir2{
-        bottom: 9vh;
+        /* bottom: 9vh; */
         right: 1vw;
     }
 
@@ -154,5 +156,17 @@ input:focus{
     .comon-cir{
         height: 11em;
         width: 11em;
+    }
+}
+
+/* Media Query for Big Screen */
+
+@media (min-width:1441px){
+    .comon-cir{
+        height: 30vh;
+        width: 30vh;
+    }
+    .forminner{
+        transform: scale(2);
     }
 }
