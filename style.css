@@ -161,7 +161,7 @@ input:focus{
 
 /* Media Query for Big Screen */
 
-@media (min-width:1441px){
+@media (min-width:2000px){
     .comon-cir{
         height: 30vh;
         width: 30vh;
